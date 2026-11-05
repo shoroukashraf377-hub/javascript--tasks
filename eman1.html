@@ -1,0 +1,27 @@
+<html>
+
+<head>
+
+</head>
+<body>
+<script>
+const students = [
+   {id: 1, average: 85},
+   {id: 2, average: 42},
+   {id: 3, average: 90},
+   {id: 4, average: 48}
+
+];
+const strugglingStudents = students.filter( s => s.average >= 40 && s.average <=49 );
+const upgradedGrades = strugglingStudents.map( s=> s.average + 5);
+
+const totalUpgradad = upgradedGrades.reduce((sum , grade)=> sum + grade ,0);
+
+const upgradedAverage =totalUpgradad / strugglingStudents.length;
+
+console.log("متوسط درجات الطلاب بعد الرأفه",upgradedAverage);
+
+</script>
+</body>
+
+</html>
